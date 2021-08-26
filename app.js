@@ -23,7 +23,7 @@ function handleViewResize() {
 
 h1.addEventListener("mouseenter", handleMouseEnter);
 h1.addEventListener("mouseleave", handleMouseLeave);
-window.addEventListener("resize", handleViewResize);
+// window.addEventListener("resize", handleViewResize);
 window.addEventListener("contextmenu", handleRightClick);
 
 // // <?? DONT DELETE THIS ??>
@@ -66,3 +66,27 @@ window.addEventListener("contextmenu", handleRightClick);
 
 // window.addEventListener("resize", superEventHandler.handleWindowResize);
 // window.addEventListener("contextmenu", superEventHandler.handleRightClick);
+
+import "./style.css";
+
+const body = document.body;
+
+const BIG_SCREEN = "bigScreen";
+const MEDIUM_SCREEN = "mediumScreen";
+const SMALL_SCREEN = "smallScreen";
+
+function handleResize() {
+  const width = window.innerWidth;
+  if (width > 1000) {
+    body.classList.add(BIG_SCREEN);
+    body.classList.remove(MEDIUM_SCREEN);
+  } else if (width <= 1000 && width >= 600) {
+    body.classList.add(MEDIUM_SCREEN);
+    body.classList.remove(BIG_SCREEN, SMALL_SCREEN);
+  } else {
+    body.classList.add(SMALL_SCREEN);
+    body.classList.remove(MEDIUM_SCREEN);
+  }
+}
+
+window.addEventListener("resize", handleResize);
