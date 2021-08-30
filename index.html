@@ -2,15 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Momentum</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Momentum App</title>
   </head>
   <body>
-    <h2>hello!!</h2>
-    <div class="hello">
-      <h1>hello!</h1>
-    </div>
+    <form class="hidden" id="login-form">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      />
+      <input type="submit" value="Log In" />
+    </form>
+    <h1 class="hidden" id="greeting"></h1>
     <script src="app.js"></script>
   </body>
 </html>
+
+{% comment %} <!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanilla Challenge</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>Random Number Game</h1>
+
+    <span class="js-rangeText">Generate a number between 0 and : </span>
+    <input type="number" class="js-range" />
+
+    <form class="js-form">
+      <span>Guess the Number : </span>
+      <input type="number" class="js-input" />
+      <button type="submit">Play!</button>
+    </form>
+    <h4 class="js-choose"></h4>
+    <h3 class="js-result"></h3>
+    <script src="src/index.js"></script>
+  </body>
+</html>
+{% endcomment %}
